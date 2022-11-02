@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url(/images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-color: var(--Violet);
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+  padding: 40px 0;
+  margin: 0 2rem;
+}
+
+.header img {
+  width: 170px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.text h1 {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  line-height: 3.5rem;
+  width: 400px;
+  padding-bottom: 30px;
+}
+
+.text p {
+  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  width: 630px;
+  padding-bottom: 25px;
+}
+
+.text a {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  padding: 13px 50px;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 8px 17px -8px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.text a:hover {
+    color: #fff;
+    background: var(--Soft-Magenta);
+}
+
+.media {
+  text-align: right;
+}
+
+.media a:not(:first-child) {
+  margin-left: 2rem;
+}
+
+.media a i {
+  color: #fff;
+  position: relative;
+}
+
+.media a i::after {
+  content: "";
+  position: absolute;
+  height: 41px;
+  width: 41px;
+  border-radius: 50%;
+  border: 1px solid white;
+  left: -14px;
+  bottom: -21px;
+}
+
+.media a:nth-child(2) {
+  margin-left: 2.3rem;
+}
+
+.media a:hover i {
+  color: var(--Soft-Magenta);
+}
+
+.media a i:hover::after {
+  border-color: var(--Soft-Magenta);
+}
+
+.attribution { 
+    color: #fff;
+    font-size: 14px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: greenyellow; 
+}
+
+@media only screen and (max-width: 375px) {
+    .container {
+        height: 120vh;
+    }
+    .header img {
+        width: 40%;
+    }
+    .main .hero img {
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .text h1 {
+        width: auto;
+        font-size: 24px;
+        line-height: 2.3rem;
+        padding-bottom: 16px;
+    }
+
+    .text p {
+        width: auto;
+        font-size: 15px;
+    }
+
+    .text a {
+        font-size: 12px;
+        padding: 10px 75px;
+    }
+
+    .media {
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    .media a i {
+        font-size: 12px;
+    }
+
+    .media a i::after {
+        height: 23px;
+        width: 23px;
+        left: -7.5px;
+        bottom: -12px;
+      }
+
+      .media a:not(:first-child) {
+        margin-left: 1.2rem;
+      }
+
+      .media a:nth-child(2) {
+        margin-left: 1.5rem;
+      }
+}
